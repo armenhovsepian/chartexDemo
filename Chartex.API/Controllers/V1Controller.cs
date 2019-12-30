@@ -8,7 +8,7 @@ using Chartex.Infrastructure.Data.Services;
 namespace Chartex.API.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*", exposedHeaders: "X-My-Header")]
-    [EnableCors(origins: "https://localhost:44316/", headers: "*", methods: "*")]
+    //[EnableCors(origins: "https://localhost:44316/", headers: "*", methods: "*")]
     public class V1Controller : ApiController
     {
         private readonly ITransactionReportService _userTurnOverService;
@@ -22,7 +22,8 @@ namespace Chartex.API.Controllers
         [Route("api/v1/GetTransactionReport/{userId:int?}")]
         public IEnumerable<UserTurnOver> GetTransactionReport(int? userId = 0)
         {
-            return _userTurnOverService.GetTransactionReportByUserId(userId);
+            var data = _userTurnOverService.GetTransactionReportByUserId(userId);
+            return data;
         }
     }
 }
