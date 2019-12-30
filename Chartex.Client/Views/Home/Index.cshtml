@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Chartex Client</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table-bordered table-striped table-responsive" width="100%">
+            <tr>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        $(function () {
+            var userid = 2;
+
+
+            $.ajax({
+                type: "GET",
+                dataType : "JSON",
+                url: "http://localhost:60000/api/v1/GetTransactionReport/" + userid,
+                success: function (response) {
+                    debugger;
+                    alert(response);
+                },
+                error: function () {
+                    alert("Something went wrong");
+                }
+            })
+        });
+    </script>
+    
+    }

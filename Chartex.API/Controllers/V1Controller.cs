@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Chartex.Core.Entities;
 using Chartex.Core.Interfaces;
 using Chartex.Infrastructure.Data.Services;
 
 namespace Chartex.API.Controllers
 {
+    //[EnableCors(origins: "*", headers: "*", methods: "*", exposedHeaders: "X-My-Header")]
+    [EnableCors(origins: "https://localhost:44316/", headers: "*", methods: "*")]
     public class V1Controller : ApiController
     {
         private readonly ITransactionReportService _userTurnOverService;
