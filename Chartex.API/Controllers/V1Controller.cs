@@ -8,21 +8,18 @@ namespace Chartex.API.Controllers
 {
     public class V1Controller : ApiController
     {
-        private readonly IUserTurnOverService _userTurnOverService;
+        private readonly ITransactionReportService _userTurnOverService;
 
         public V1Controller()
         {
             // Use Dependency Injection
-            _userTurnOverService = new UserTurnOverService();
+            _userTurnOverService = new TransactionReportService();
         }
-        /// <summary>
-        /// https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2#optional
-        /// </summary>
 
-        [Route("api/v1/GetUserTurnOver/{userId:int?}")]
-        public IEnumerable<UserTurnOver> GetUserTurnOver(int? userId = 0)
+        [Route("api/v1/GetTransactionReport/{userId:int?}")]
+        public IEnumerable<UserTurnOver> GetTransactionReport(int? userId = 0)
         {
-            return _userTurnOverService.GetUserTurnOversById(userId);
+            return _userTurnOverService.GetTransactionReportByUserId(userId);
         }
     }
 }

@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\UserTurnOver.cs" />
-    <Compile Include="Interfaces\IUserTurnOverService.cs" />
+    <Compile Include="Interfaces\ITransactionReportService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

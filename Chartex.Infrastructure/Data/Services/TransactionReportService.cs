@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Chartex.Infrastructure.Data.Services
 {
-    public class UserTurnOverService : IUserTurnOverService
+    public class TransactionReportService : ITransactionReportService
     {
-        public IEnumerable<UserTurnOver> GetUserTurnOversById(int? userId)
+        public IEnumerable<UserTurnOver> GetTransactionReportByUserId(int? userId)
         {
             // execute SP
             // Ex : using(var context = new ChartexEntities()) { ... }
