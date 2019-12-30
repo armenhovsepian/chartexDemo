@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chartex.Core", "Chartex.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chartex.Client", "Chartex.Client\Chartex.Client.csproj", "{76BC7E0F-DB2C-4341-A09A-C482E6246C21}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{9660377E-FB45-4ED0-B631-A26275B6098B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{C3B325D7-12F0-4AB3-BE05-E8AB6EEE8676}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1C1D03E-900D-4364-A8F2-68B1E76B7BFC} = {9660377E-FB45-4ED0-B631-A26275B6098B}
+		{F7C82068-1F95-42CC-AF35-9BD34D024440} = {9660377E-FB45-4ED0-B631-A26275B6098B}
+		{2A666864-09D3-4791-AF5D-E4640FD3FBB0} = {9660377E-FB45-4ED0-B631-A26275B6098B}
+		{76BC7E0F-DB2C-4341-A09A-C482E6246C21} = {C3B325D7-12F0-4AB3-BE05-E8AB6EEE8676}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3B448F8-CD6C-4D22-8DF4-F6265EDF1F20}
